@@ -23,7 +23,7 @@
 		}
 		.missile {
 			position: absolute;
-			background-color: magenta;
+			background-color: cyan; /* Cambié el color de los misiles a cyan */
 			width: 2px;
 			height: 10px;
 		}
@@ -77,16 +77,14 @@
 
 		function moveEnemies() {
 			for (var idx = 0; idx < enemies.length; idx++){
-				enemies[idx].top += 3;
+				enemies[idx].top += 5; // Aumenté la velocidad de movimiento de los enemigos
 			}
 		}
+
 		function moveMissiles(){
 			for (var idx = 0; idx < missiles.length; idx++){
-				missiles[idx].top -= 10;
+				missiles[idx].top -= 15; // Aumenté la velocidad de movimiento de los misiles
 			}
- 
- 
-
 		}
 
 		document.onkeydown = function(e) {
@@ -116,7 +114,7 @@
 			drawEnemies();
 			drawPlayer();
 			drawMissiles();
-			moveMissiles()
+			moveMissiles();
 			setTimeout(gameLoop, 100);
 		}
 
